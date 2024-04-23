@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: red;
+  border: 2px solid red;
+}
+
+.btn-danger:hover {
+  background-color: red;
+  color: white;
+}
+
+.quote {
+  font-size: 1.2em;
+}
+
+.quote-text {
+  font-style: italic;
+  min-height: 2.3em;
+  margin-block-end: 0.7em;
+}
+
+.quote-author {
+  font-weight: bold;
+  margin-block-start: 0.7em;
+}
+
+.favorites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  color: darkslategray;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 25%;
+}
+
+.favorite-card-content {
+  flex: 1;
+  padding: 0px 3px;
+}
+
+.favorite-card-author {
+  font-style: italic;
+}
+
+.star-icon {
+  font-size: 30px;
+  color: yellow;
+  vertical-align: middle;
+  cursor: pointer;
+}
