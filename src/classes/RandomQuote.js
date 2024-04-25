@@ -10,12 +10,18 @@ class RandomQuote {
   }
 
   static async getRandomQuoteViaAPI() {
-    const url = 'https://api.quotable.io/random';
+    const url = 'https://api.quotable.io/quotes/random';
     const options = { headers: { 'Content-Type': 'application/json' } };
     try {
       const response = await fetch(url, options);
-      const { _id: id, content, author } = await response.json();
-      return new Quote(id, content, author);
+      const quotes = await response.json();
+      if (Array.isArray(quotes) && quotes.length === 1) {
+        const quote = quotes[0];
+        const { _id: id, content, author } = quote;
+        if (id && content && author) {
+          return new Quote(id, content, author);
+        }
+      }
     } catch (error) {
       console.error(error);
     }
